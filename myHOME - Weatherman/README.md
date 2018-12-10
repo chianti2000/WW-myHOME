@@ -41,3 +41,8 @@ Gesamter Flow für alle Optionen mit Debug Möglichkeiten:
 Flow für reine Node-RED GUI-Darstellung über MQTT:
 
 ![Node-RED - FLOW -  WW-myHOME - Weatherman - MQTT](./img/NodeRED_FLOW_Weatherman_MQTT_1.0.jpg)
+
+### Version
+
+1.0.0.0 - 2018-12-07
+- Erstausgabe
