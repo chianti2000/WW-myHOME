@@ -30,14 +30,14 @@
 
 ### Node-RED - GUI
 
-![Node-RED - GUI -  WW-myHOME - Weatherman](myHOME - Weatherman\img\NodeRED_GUI_Weatherman_1.0.jpg)
+![Node-RED - GUI -  WW-myHOME - Weatherman](.\img\NodeRED_GUI_Weatherman_1.0.jpg)
 
 ### Node-RED - FLOW
 
 Gesamter Flow für alle Optionen mit Debug Möglichkeiten:
 
-![Node-RED - FLOW -  WW-myHOME - Weatherman](myHOME - Weatherman\img\NodeRED_FLOW_Weatherman_1.0.jpg)
+![Node-RED - FLOW -  WW-myHOME - Weatherman](.\img\NodeRED_FLOW_Weatherman_1.0.jpg)
 
 Flow für reine Node-RED GUI-Darstellung über MQTT:
 
-![Node-RED - FLOW -  WW-myHOME - Weatherman - MQTT](myHOME - Weatherman\img\NodeRED_FLOW_Weatherman_MQTT_1.0.jpg)
+![Node-RED - FLOW -  WW-myHOME - Weatherman - MQTT](.\img\NodeRED_FLOW_Weatherman_MQTT_1.0.jpg)
