@@ -16,4 +16,4 @@ Erstellen der myHOME-Datenbank mit Node-RED
 
 Gesamter Flow für alle Optionen:
 
-![Node-RED - FLOW -  WW-myHOME - Datenbank](https://github.com/wolwin/WW-myHOME/blob/master/myHOME%20-%20Datenbank/img/NodeRED_FLOW_Datenbank_1.0.jpg)
+![Node-RED - FLOW -  WW-myHOME - Datenbank](./img/NodeRED_FLOW_Datenbank_1.0.jpg)
