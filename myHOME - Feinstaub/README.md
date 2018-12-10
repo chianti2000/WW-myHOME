@@ -33,14 +33,14 @@
 
 Gesamter Flow für alle Optionen mit Debug Optionen:
 
-![Node-RED - GUI -  WW-myHOME - Feinstaub](img\NodeRED_GUI_Feinstaub_1.0.jpg)
+![Node-RED - GUI -  WW-myHOME - Feinstaub](img\\NodeRED_GUI_Feinstaub_1.0.jpg)
 
 ### Node-RED - FLOW
 
 Gesamter Flow für alle Optionen mit Debug Möglichkeiten:
 
-![Node-RED - FLOW -  WW-myHOME - Feinstaub](img\NodeRED_FLOW_Feinstaub_1.0.jpg)
+![Node-RED - FLOW -  WW-myHOME - Feinstaub](img\\NodeRED_FLOW_Feinstaub_1.0.jpg)
 
 Flow für reine Node-RED GUI-Darstellung über MQTT:
 
-![Node-RED - FLOW -  WW-myHOME - Feinstaub - MQTT](img\NodeRED_FLOW_Feinstaub_MQTT_1.0.jpg)
+![Node-RED - FLOW -  WW-myHOME - Feinstaub - MQTT](img\\NodeRED_FLOW_Feinstaub_MQTT_1.0.jpg)
