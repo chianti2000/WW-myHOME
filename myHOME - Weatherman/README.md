@@ -1,0 +1,37 @@
+## WW-myHOME - Weatherman
+
+### Funktion
+Übernahme, Aufbereitung, Deployment und Visualisierung der per WiFi versandten Sensordaten der Wetterstation 'Weatherman' (Dr. Stall) durch Node-RED
+
+### Details
+- Autarkes Teilmodul zur Übernahme / Abspeichern / MQTT-Deployment von Sensordaten
+- die Sensordaten des Weatherman werden über den Port 8181 in Node-RED abgegriffen
+  - dazu muss beim Weatherman im 'Expertenmodus' eingestellt werden:
+    - CCU-Betrieb >> JSON-Daten an Server@CCU-IP
+      - http://<IP-Weatherman\>/?ccu:<IP-NodeRED-Server\>:
+      - http://<IP-Weatherman\>/?param:12:1:
+- die myHOME-Datenbank muss angelegt und für den Weatherman vorbereitet sein (siehe Doku dort)
+- in der myHOME-Datenbank befindet sich für jedes Gerät/Sensor/Wert ein Konfigurationssatz, über den u.a. gesteuert werden kann, was mit dem Datensatz geschehen soll - es kann konfiguriert werden ...
+  - nur die Daten werden weiterverarbeitet, für die es einen Konfigurationseintrag in der myHOME-Datenbank gibt
+  - über ein Aktiv-/Inaktiv-Flag kann ein Device-Datensatz von der Verarbeitung ein- oder ausgeschlossen werden
+  - über ein Datenbank-Flag kann entschieden werden, ob der Device-Datensatz in der myHOME-Datenbank abgelegt wird
+  - über ein MQTT-Flag kann entschieden werden, ob der Device-Datensatz per MQTT über den eingetragenen MQTT-Pfad versandt werden soll
+  - alle Device-Angaben (Name, Bezeichnung, Einheiten, etc.) sind einzeln konfigurierbar
+  - für den Weatherman werden die 'name'-Bezeichnungen neu 'normiert'
+    - damit braucht keine Code-Anpassung der Folge-Prozesse mehr erfolgen, wenn bei einer Firmware-Aenderung die 'name'-Einträge geändert werden - man muss nur die Konfiguration der Device-Parameter in der myHOME-Datenbank vornehmen (Doku siehe dort) - bei den Folgeprozessen bleiben die festgelegten Device Bezeichner erhalten
+- es werden intern unterschiedliche 'payloads' generiert, die für eigene Entwicklungen genutzt werden können:
+  - payload: Original Device-Objekte Weatherman
+  - payload_sys: 'normierte' Device-Objekte der Weatherman Systemangaben
+  - payload_var: 'normierte' Device-Objekte des Weatherman
+  - payload_avg: 'normierte' Device-Objekte des Weatherman - ALLE numerischen Werte werden als 'gleitende Mittelwerte' im 5 Minuten-Intervall (einstellbar) bereitgestellt
+  - payload_sql: SQL-Befehle zur Uebernahme in die myHOME-Datenbank
+  - payload_mqtt: 'normierte' Device-Objekte zur Uebergabe an MQTT-Server
+- Watchdog und JSON-Fehlerbehandlung mit Statusausgabe
+
+### Node-RED - GUI
+
+![Node-RED - GUI -  WW-myHOME - Weatherman](img\NodeRED_GUI_Weatherman_1.0.jpg)
+
+### Node-RED - FLOW
+
+![Node-RED - FLOW -  WW-myHOME - Weatherman](img\NodeRED_FLOW_Weatherman_1.0.jpg)
