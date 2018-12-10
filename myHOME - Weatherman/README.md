@@ -34,7 +34,7 @@
 
 ### Node-RED - FLOW
 
-Gesamter Flow für alle Optionen mit Debug Optionen:
+Gesamter Flow für alle Optionen mit Debug Möglichkeiten:
 
 ![Node-RED - FLOW -  WW-myHOME - Weatherman](img\NodeRED_FLOW_Weatherman_1.0.jpg)
 

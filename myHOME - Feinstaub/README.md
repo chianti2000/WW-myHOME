@@ -37,7 +37,7 @@ Gesamter Flow für alle Optionen mit Debug Optionen:
 
 ### Node-RED - FLOW
 
-Gesamter Flow für alle Optionen mit Debug Optionen:
+Gesamter Flow für alle Optionen mit Debug Möglichkeiten:
 
 ![Node-RED - FLOW -  WW-myHOME - Feinstaub](img\NodeRED_FLOW_Feinstaub_1.0.jpg)
 
