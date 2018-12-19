@@ -9,12 +9,11 @@ Universelle Wetterkappe für die Luftdruck-Sensormodule BME280 oder BMP280
 
 
 - Basierend auf dieser Grundlage wurde die Wetterkappe neu konstruiert und in einigen Punkten modifiziert und erweitert:
- - Erhöhung der Wandstärken (auf 2 mm)
- - Erweiterung der Gehäuselüftung für die Sensorkammer
- - (verschiedene) Adapter zur Aufnahme des Sensors
- - eindeutige Fixierung der Kabelzuführung
- - zusätzliche Lüftungskappen (einfach / erweitert) zur geschützten Entlüftung der Sensorkammer
-
+   - Erhöhung der Wandstärken (auf 2 mm)
+   - Erweiterung der Gehäuselüftung für die Sensorkammer
+   - (verschiedene) Adapter zur Aufnahme des Sensors
+   - eindeutige Fixierung der Kabelzuführung
+   - zusätzliche Lüftungskappen (einfach / erweitert) zur geschützten Entlüftung der Sensorkammer
 
 ### BME-Shield - Übersicht
 
