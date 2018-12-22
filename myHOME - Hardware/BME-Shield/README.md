@@ -17,7 +17,7 @@ Universelle Wetterkappe für die Luftdruck-Sensormodule BME280 oder BMP280
 
 ### BME-Shield - Übersicht
 
-Konstruktion:
+Konstruktion V1.1 :
 
 ![WW-myHOME - BME-Shield - Übersicht-1](./img/UWK_101.jpg)
 ![WW-myHOME - BME-Shield - Übersicht-2](./img/UWK_102.jpg)
@@ -26,17 +26,17 @@ Konstruktion:
 
 ### BME-Shield - 3D-Druck
 
-BME-Shield (einfach):
+BME-Shield V1.0 (einfach):
 
 ![WW-myHOME - BME-Shield - 3D-Druck-einfach](./img/UWK_301.jpg)
 
-BME-Shield (erweitert):
+BME-Shield V1.0 (erweitert):
 
 ![WW-myHOME - BME-Shield - 3D-Druck-erweitert](./img/UWK_302.jpg)
 
 ### BME-Shield - 3D-Druck - Details
 
-Sensorkammer mit Lüftungskappen und Sensor-Adapter:
+Sensorkammer V1.0 mit Lüftungskappen und Sensor-Adapter:
 
 ![WW-myHOME - BME-Shield - 3D-Druck-1](./img/UWK_201.jpg)
 ![WW-myHOME - BME-Shield - 3D-Druck-2](./img/UWK_202.jpg)
@@ -49,11 +49,11 @@ Beispiel der Kabelfixierung und Sensor-Adapter (geneigt):
 
 ![WW-myHOME - BME-Shield - 3D-Druck-4](./img/UWK_204.jpg)
 
-Sensorkammer und Sensor-Adapter (geneigt):
+Sensorkammer V1.0 und Sensor-Adapter (geneigt):
 
 ![WW-myHOME - BME-Shield - 3D-Druck-5](./img/UWK_205.jpg)
 
-Sensorkammer unten (geschlossen):
+Sensorkammer V1.0 unten (geschlossen):
 
 ![WW-myHOME - BME-Shield - 3D-Druck-6](./img/UWK_206.jpg)
 
