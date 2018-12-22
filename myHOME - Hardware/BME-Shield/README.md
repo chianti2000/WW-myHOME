@@ -17,7 +17,7 @@ Universelle Wetterkappe für die Luftdruck-Sensormodule BME280 oder BMP280
 
 ### BME-Shield - Übersicht
 
-Konstruktion V1.1 :
+Konstruktion V1.1:
 
 ![WW-myHOME - BME-Shield - Übersicht-1](./img/UWK_101.jpg)
 ![WW-myHOME - BME-Shield - Übersicht-2](./img/UWK_102.jpg)
@@ -41,11 +41,11 @@ Sensorkammer V1.0 mit Lüftungskappen und Sensor-Adapter:
 ![WW-myHOME - BME-Shield - 3D-Druck-1](./img/UWK_201.jpg)
 ![WW-myHOME - BME-Shield - 3D-Druck-2](./img/UWK_202.jpg)
 
-Beispiel der Kabelfixierung und Sensor-Adapter (senkrecht):
+Beispiel der Kabelfixierung und des Sensor-Adapters (senkrecht):
 
 ![WW-myHOME - BME-Shield - 3D-Druck-3](./img/UWK_203.jpg)
 
-Beispiel der Kabelfixierung und Sensor-Adapter (geneigt):
+Beispiel der Kabelfixierung und des Sensor-Adapters (geneigt):
 
 ![WW-myHOME - BME-Shield - 3D-Druck-4](./img/UWK_204.jpg)
 
