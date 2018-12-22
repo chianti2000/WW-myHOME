@@ -9,7 +9,7 @@ Universelle Wetterkappe für die Luftdruck-Sensormodule BME280 oder BMP280
 
 
 - Basierend auf dieser Grundlage wurde die Wetterkappe neu konstruiert und in einigen Punkten modifiziert und erweitert:
-   - Erhöhung der Wandstärken auf 2 mm
+   - Vergrösserung der Sensorkammer
    - Erweiterung der Gehäuselüftung für die Sensorkammer
    - (verschiedene) Adapter zur Aufnahme des Sensors
    - eindeutige Fixierung der Kabelzuführung
@@ -59,6 +59,13 @@ Sensorkammer unten (geschlossen):
 
 ### BME-Shield - Sonstiges
 
+Tipps:
+- Die Sensorplatine vorsichtig mit Hilfe eines kleinen Pinsels mit 'Plastik 70' bestreichen (den Sensor aussparen !!).
+- Bei der Endmontage des Sensorträgers dafür sorgen, dass die Kabel in der Sensorkammer nicht die Seitenwände berühren (Feuchtigkeitsbrücke).
+- Evtl. beim Zusammenbau mit etwas Silikon sicherstellen, dass keine Feuchtigkeit über die zentrale Mutter von oben in das Gehäuse kommen kann.
+
+- Z.Z. (12-2018) läuft ein Testbetrieb des erweiterten BME-Shields an einem ESPEasy WEMOS ...
+
 BME280 Modul:
 
 ![WW-myHOME - BME-Shield - 3D-Druck-8](./img/UWK_208.jpg)
@@ -74,5 +81,8 @@ Montagematerial:
 
 ### Version
 
-1.0.0.0 - 2018-12-19
-- Erstausgabe
+1.1 - 2018-12-22
+ - Erhöhung der Spritzschuzkanten bei Sensorkammer und Deckeln
+
+1.0 - 2018-12-19
+ - Erstausgabe
