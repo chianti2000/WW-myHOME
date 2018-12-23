@@ -40,8 +40,6 @@ In der eigenen myHOME-Umgebung laufen so z.B. Node-RED, FHEM und Grafanna über 
 
 Überprüfen, ob Node-RED in der aktuellen Version installiert ist. Weiter muss das Modul 'node-red-dashboard' installiert sein - siehe im Node-RED Fenster Einstellungen oben rechts und dann unter dem Menü-Eintrag 'Manage palette'. Unter dem Reiter 'Install' kann das Modul gesucht und installiert werden - falls es schon installiert ist, kann unter 'Nodes' die Version geprüft und evtl. aktualisiert werden.
 
-### Setup - Teil 2 - Debian
-
 Für eigene Node-RED Erweiterungen sollte man einen 'public' Ordner anlegen (TTY-Konsole):
 ```
 mkdir /home/pi/.node-red/public
@@ -63,6 +61,7 @@ Node-RED starten
 node-red-start
 ```
 
+### Setup - Teil 2 - Konfiguration
 
 
 
