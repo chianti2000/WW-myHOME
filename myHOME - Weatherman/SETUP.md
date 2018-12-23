@@ -36,7 +36,17 @@ Als Hardware Grundlage wird ein Raspberry Pi mit einer aktuellen Debian Version 
 Die Installation von Node-RED, Mosquitto und MariaDB wird hier nicht im Einzelnen dargestellt. Es macht jedoch Sinn, alle Module so aufzusetzen, dass sie über sichere Verbindungen miteinander kommunizieren.
 In der eigenen myHOME-Umgebung laufen so z.B. Node-RED, FHEM und Grafanna über einem Nginx Proxy Server.
 
-### Setup - Teil 1 - Node-RED
+### Setup - Teil 1 - Weatherman
+
+- die Sensordaten des Weatherman werden über den Port 8181 in Node-RED abgegriffen
+  - dazu muss beim Weatherman im 'Expertenmodus' eingestellt werden:
+    - CCU-Betrieb >> JSON-Daten an Server@CCU-IP
+      - http://<IP-Weatherman\>/?ccu:<IP-NodeRED-Server\>:
+      - http://<IP-Weatherman\>/?param:12:1:
+- die Ortshöhe über N.N. muss im Weatherman auf '0' gesetzt werden, da die barometrische Höhenreduktion über das Node-RED Modul erfolgt:
+  - http://<IP-Weatherman\>/?param:20:0:
+
+### Setup - Teil 2 - Node-RED
 
 Überprüfen, ob Node-RED in der aktuellen Version installiert ist. Weiter muss das Modul 'node-red-dashboard' installiert sein - siehe im Node-RED Fenster Einstellungen oben rechts und dann unter dem Menü-Eintrag 'Manage palette'. Unter dem Reiter 'Install' kann das Modul gesucht und installiert werden - falls es schon installiert ist, kann unter 'Nodes' die Version geprüft und evtl. aktualisiert werden.
 
@@ -61,32 +71,58 @@ Node-RED starten:
 node-red-start
 ```
 
-### Setup - Teil 2 - Konfiguration Weatherman Device
+### Setup - Teil 3 - Konfiguration Weatherman Device
 
-Hier finden sich die UTF-8 Device CSV-Konfigurationsdateien für den Weatherman:
+Hier finden sich die Device CSV-Konfigurationsdateien für den Weatherman:
 
 [myHOME_Devices_WM_all.csv](./bin/myHOME_Devices_WM_all.csv)<br>
 [myHOME_Devices_WM_std.csv](./bin/myHOME_Devices_WM_std.csv)
 
-Die CSV-Dateien sind vorkonfiguriert und können sofort benutzt werden. Bitte die CSV-Dateien bei einer Anpassung NICHT mit MS Excel editieren - besser: Notepad++ benutzen!!
+Die CSV-Dateien sind vorkonfiguriert und können sofort benutzt werden. Bitte die CSV-Dateien bei einer Anpassung NICHT mit MS Excel editieren - besser: Notepad++ benutzen (UTF-8 Zeichensatz)!!
 
-Erläuterungen zu den CSV-Spalten finden sich in der Beschreibung
+Erläuterungen zu den CSV-Spalten finden sich in der Beschreibung:
 
 [Datenbank-Tabelle - SENSOR_DEVICES](/myHOME%20-%20Datenbank/README.md#datenbank-tabelle---sensor_devices)
 
-[xxx](https://github.com/wolwin/WW-myHOME/blob/master/myHOME%20-%20Datenbank/README.md#datenbank-tabelle---sensor_devices)
+Anpassung der barometrischen Ortshöhen-Beschreibung "hPa (190 m ü. N.N.)" in der Zeile 23 der Datei 'myHOME_Devices_xxx.csv' von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert reduziert werden soll.
 
+Weitere Anpassungen in den Spalten ID_DEV, DEV_DESC, DEV_LOC, DEV_VAL_DESC, DEV_VAL_UNIT, DEV_MQTT, DEV_FL_ACT, DEV_FL_STO, DEV_FL_MQTT können vorgenommen werden.
 
-Kopieren der 'myHOME_Devices_xxx.csv' (angepaßten) Dateien nach '/home/pi/.node-red/public'
+Kopieren der angepaßten 'myHOME_Devices_xxx.csv' Dateien nach '/home/pi/.node-red/public'
 
-- Minimal- und Standard-Version
+- für die Minimal- und Standard-Version
   - 'myHOME_Devices_WM_std.csv' nach 'myHOME_Devices_WM.csv' kopieren
-- Maximal-Version
+- für die Maximal-Version
   - 'myHOME_Devices_WM_max.csv' nach 'myHOME_Devices_WM.csv'
 
+### Setup - Teil 4 - Konfiguration  Datenbank
+
+Für die Standard-Version mit Datenbank Option und für die Maximal-Version muss die 'MariaDB SQL-Datenbank' installiert und konfiguriert werden:
+
+[WW-myHOME - Datenbank - Setup.md](/myHOME%20-%20Datenbank/README.md)
+
+### Setup - Teil 5 - Node-RED Weatherman
+
+Kopieren des Weatherman Node-RED Moduls, indem die Datei 'myHOME_FLOW_Weatherman_xxx.md' auf die Flow Ebene von Node-RED im Explorer gezogen wird.
+
+Mit einem Doppelklick auf den Node 'Init-Flow' die Anpassungen für das Weatherman Modul vornehmen.
+
+- für alle Versionen
+
+   - Altitude [m] - eigene Ortshöhe über N.N. zur Berechnung des barometrischen Luftdrucks in Bezug zu N.N.. Von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert reduziert werden soll, ändern<br>
+   *var myBaro_NN = 190;*<br>
+   <br>
+   - Flow-Vorgabe, ob nur neue Readings oder alle Readings eines Devices berücksichtigt werden sollen<br>
+   = 0 - alle Readings<br>
+   \> 0 - nur neue Readings (default)<br>
+   *var myTmpNewOnly_Default = 1;*
 
 
+- für die Minimal-Version
 
+- für die Standard-Version
+
+- für die Maximal-Version
 
 
 
