@@ -72,7 +72,7 @@ Die CSV-Dateien sind vorkonfiguriert und können sofort benutzt werden. Bitte di
 
 Erläuterungen zu den CSV-Spalten finden sich in der Beschreibung
 
-[Datenbank-Tabelle - SENSOR_DEVICES]("../myHOME%20-%20Datenbank/README.md")
+[Datenbank-Tabelle - SENSOR_DEVICES]("/myHOME%20-%20Datenbank/README.md")
 
 Kopieren der 'myHOME_Devices_xxx.csv' (angepaßten) Dateien nach '/home/pi/.node-red/public'
 
