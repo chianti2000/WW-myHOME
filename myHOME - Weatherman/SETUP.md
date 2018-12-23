@@ -74,7 +74,7 @@ Erläuterungen zu den CSV-Spalten finden sich in der Beschreibung
 
 [Datenbank-Tabelle - SENSOR_DEVICES](/myHOME%20-%20Datenbank/README.md#datenbank-tabelle---sensor_devices)
 
-https://github.com/wolwin/WW-myHOME/blob/master/myHOME%20-%20Datenbank/README.md#datenbank-tabelle---sensor_devices
+[xxx](https://github.com/wolwin/WW-myHOME/blob/master/myHOME%20-%20Datenbank/README.md#datenbank-tabelle---sensor_devices)
 
 
 Kopieren der 'myHOME_Devices_xxx.csv' (angepaßten) Dateien nach '/home/pi/.node-red/public'
