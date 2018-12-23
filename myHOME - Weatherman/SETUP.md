@@ -61,8 +61,25 @@ Node-RED starten:
 node-red-start
 ```
 
-### Setup - Teil 2 - Konfiguration
+### Setup - Teil 2 - Konfiguration Weatherman Device
 
+Hier finden sich die UTF-8 Device CSV-Konfigurationsdateien für den Weatherman:
+
+[myHOME_Devices_WM_all.csv](./bin/myHOME_Devices_WM_all.csv)<br>
+[myHOME_Devices_WM_std.csv](./bin/myHOME_Devices_WM_std.csv)
+
+Die CSV-Dateien sind vorkonfiguriert und können sofort benutzt werden. Bitte die CSV-Dateien bei einer Anpassung NICHT mit MS Excel editieren - besser: Notepad++ benutzen!!
+
+Erläuterungen zu den CSV-Spalten finden sich in der Beschreibung
+
+[Datenbank-Tabelle - SENSOR_DEVICES](../myHOME - Datenbank/README.md#Datenbank-Tabelle - SENSOR_DEVICES)
+
+Kopieren der 'myHOME_Devices_xxx.csv' (angepaßten) Dateien nach '/home/pi/.node-red/public'
+
+- Minimal- und Standard-Version
+  - 'myHOME_Devices_WM_std.csv' nach 'myHOME_Devices_WM.csv' kopieren
+- Maximal-Version
+  - 'myHOME_Devices_WM_max.csv' nach 'myHOME_Devices_WM.csv'
 
 
 
