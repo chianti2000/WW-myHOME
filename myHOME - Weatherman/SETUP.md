@@ -43,34 +43,26 @@ In der eigenen myHOME-Umgebung laufen so z.B. Node-RED, FHEM und Grafanna über 
 ### Setup - Teil 2 - Debian
 
 Für eigene Node-RED Erweiterungen sollte man einen 'public' Ordner anlegen (TTY-Konsole):
-
-...
+```
 mkdir /home/pi/.node-red/public
-...
-
+```
 Node-RED stoppen
-
-...
+```
 node-red-stop
-...
-
+```
 Die Node-RED 'settings.js'-Datei öffnen:
-
-...
+```
 sudo nano /home/pi/.node-red/settings.js
-...
-
+```
 Folgenden Eintrag vornehmen und Datei mit 'CTRL-X' - 'Ja' abspeichern:
-
-...
+```
 httpStatic: '/home/pi/.node-red/public',
-...
-
+```
 Node-RED starten
-
-...
+```
 node-red-start
-...
+```
+
 
 
 
