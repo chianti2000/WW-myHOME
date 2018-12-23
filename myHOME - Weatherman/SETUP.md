@@ -86,7 +86,7 @@ Erläuterungen zu den CSV-Spalten finden sich in der Beschreibung:
 
 Anpassung der barometrischen Ortshöhen-Beschreibung "hPa (190 m ü. N.N.)" in der Zeile 23 der Datei 'myHOME_Devices_xxx.csv' von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert reduziert werden soll.
 
-Weitere Anpassungen in den Spalten ID_DEV, DEV_DESC, DEV_LOC, DEV_VAL_DESC, DEV_VAL_UNIT, DEV_MQTT, DEV_FL_ACT, DEV_FL_STO, DEV_FL_MQTT können vorgenommen werden.
+Optional können weitere Anpassungen in den Spalten ID_DEV, DEV_DESC, DEV_LOC, DEV_VAL_DESC, DEV_VAL_UNIT, DEV_MQTT, DEV_FL_ACT, DEV_FL_STO, DEV_FL_MQTT vorgenommen werden.
 
 Kopieren der angepaßten 'myHOME_Devices_xxx.csv' Dateien nach '/home/pi/.node-red/public'
 
@@ -109,12 +109,12 @@ Mit einem Doppelklick auf den Node 'Init-Flow' die Anpassungen für das Weatherm
 
 - für alle Versionen
 
-   - Altitude [m] - eigene Ortshöhe über N.N. zur Berechnung des barometrischen Luftdrucks in Bezug zu N.N.. Von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert reduziert werden soll, ändern<br>
+   - Altitude [m] - eigene Ortshöhe über N.N. zur Berechnung des barometrischen Luftdrucks in Bezug zu N.N.. Von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert umgerechnet werden soll, ändern<br>
    *var myBaro_NN = 190;*<br>
    <br>
    - Flow-Vorgabe, ob nur neue Readings oder alle Readings eines Devices berücksichtigt werden sollen<br>
-   = 0 - alle Readings<br>
-   \> 0 - nur neue Readings (default)<br>
+   // = 0 - alle Readings<br>
+   // > 0 - nur neue Readings (default)<br>
    *var myTmpNewOnly_Default = 1;*
 
 
