@@ -283,6 +283,16 @@ Beschreibung - diese Tabelle enthält
 - einen Index-Verweis auf die Attribute der Sensor-Angaben
 - ein Flag zur internen Verwendung
 
+---------------------------------------------------------------------------
+DB-Spalte       Beschreibung            Beispiel
+---------------------------------------------------------------------------
+ID_READ         Reading-ID              Reading-ID Nummer - DATETIME-Wert
+ID_DEV          Device-ID               Device-ID Nummer
+READ_TIME       Zeitstempel (String)    2018-11-02 21:45:22
+READ_VALUE      Wert des Readings       71
+READ_FLAG       internes Flag           0 ... 255
+---------------------------------------------------------------------------
+
 USE `myHOME`;
 
 DROP TABLE IF EXISTS `SENSOR_READINGS`;
@@ -363,16 +373,6 @@ Datum W3C       2018-11-04T10:28:24+00:00
     - in einen String-Zeitstempel gewandelt und in READ_TIME abgespeichert
   - nicht übergebene Parameter Werte für ID_DEV, ID_UNIT und READ_FLAG
     werden automatisch mit '0' abgespeichert
----------------------------------------------------------------------------
-
----------------------------------------------------------------------------
-DB-Spalte       Beschreibung            Beispiel
----------------------------------------------------------------------------
-ID_READ         Reading-ID              Reading-ID Nummer - DATETIME-Wert
-ID_DEV          Device-ID               Device-ID Nummer
-READ_TIME       Zeitstempel (String)    2018-11-02 21:45:22
-READ_VALUE      Wert des Readings       71
-READ_FLAG       internes Flag           0 ... 255
 ---------------------------------------------------------------------------
 
 ============================================================================================================
