@@ -107,27 +107,58 @@ Kopieren des Weatherman Node-RED Moduls, indem die Datei 'myHOME_FLOW_Weatherman
 
 Mit einem Doppelklick auf den Node 'Init-Flow' die Anpassungen für das Weatherman Modul vornehmen.
 
-- für alle Versionen
+- *var myBaro_NN = 190;*<br>
+Altitude [m] - eigene Ortshöhe über N.N. zur Berechnung des barometrischen Luftdrucks in Bezug zu N.N.. Von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert umgerechnet werden soll, ändern<br>
 
-   - Altitude [m] - eigene Ortshöhe über N.N. zur Berechnung des barometrischen Luftdrucks in Bezug zu N.N.. Von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert umgerechnet werden soll, ändern<br>
-   *var myBaro_NN = 190;*<br>
-   <br>
-   - Flow-Vorgabe, ob nur neue Readings oder alle Readings eines Devices berücksichtigt werden sollen<br>
-   // = 0 - alle Readings<br>
-   // > 0 - nur neue Readings (default)<br>
-   *var myTmpNewOnly_Default = 1;*
+- *var myTmpNewOnly_Default = 1;*<br>
+Flow-Vorgabe, ob nur neue Readings (Werte) oder alle Readings eines Devices berücksichtigt werden sollen<br>
+= 0 - alle Readings<br>
+&gt; 0 - nur neue Readings<br>
 
+- *var myDbData_Flag = 1;*<br>
+Flow-Vorgabe, ob die Werte eines Devices in eine myHOME Datenbank abgespeichert werden<br>
+= 0 - keine DB Data Ausgabe<br>
+&gt; 0 - DB Data Ausgabe<br>
 
-- für die Minimal-Version
+  - für die Minimal-Version<br>
+    *var myDbData_Flag = 0;*<br>
+  - für die Standard-Version nur, wenn optional eine mariaDB SQL Datenbank installiert ist kann das Abspeichern gewählt werden, sonst<br>
+  *var myDbData_Flag = 0;*<br><br>
 
-- für die Standard-Version
+- *var myMqttData_Flag = 1;*<br>
+Flow-Vorgabe, ob eine MQTT Ausgabe für die Devices erfolgen soll<br>
+= 0 - keine MQTT Data Ausgabe<br>
+&gt; 0 - MQTT Data Ausgabe<br>
 
-- für die Maximal-Version
+  - für die Minimal-Version<br>
+    *var myMqttData_Flag = 0;*<br><br>
 
+- *var myMqttState_Flag = 1;*<br>
+*var myMqttState_DevName = "Weatherman";*<br>
+*var myMqttState_DevMqtt = "/myHOME/sensor/devices/Weatherman/state";*<br>
+Flow-Vorgabe, ob eine MQTT Status Ausgabe für die Devices erfolgen soll<br>
+= 0 - keine MQTT Status Ausgabe<br>
+&gt; 0 - MQTT Status Ausgabe
 
+  - für die Minimal-Version<br>
+    *var myMqttData_Flag = 0;*<br><br>
 
+- *var myMqttAvg_Flag = 1;*<br>
+*var myMqttAvg_DevMqtt = "/myHOME/sensor/devices/Weatherman/avg";*<br>
+Flow-Vorgabe, ob eine MQTT Ausgabe für den gleitenden Mittelwert (AVG) aller numerischen Felder der Devices erfolgen soll<br>
+= 0 - keine MQTT AVG Ausgabe<br>
+&gt; 0 - MQTT AVG Ausgabe<br>
 
+  - für die Minimal-Version<br>
+    *var myMqttData_Flag = 0;*<br>
 
+Den 'Init-Flow' Node mit dem 'Done' Knopfschließen.
+
+Dann müssen noch in den MQTT-Ausgabe Nodes die MQTT-Broker Adressen eingetragen werden (nicht für Minimal-Version).
+
+Gleiches gilt für die myHOME Datenbank Nodes.
+
+Abschließend wird der Weatherman Flow mit dem 'Deploy' Knopf veröffentlicht.
 
 ### Version
 
