@@ -123,7 +123,7 @@ Flow-Vorgabe, ob die Werte eines Devices in eine myHOME Datenbank abgespeichert 
   - für die Minimal-Version<br>
     *var myDbData_Flag = 0;*<br>
   - für die Standard-Version nur, wenn optional eine mariaDB SQL Datenbank installiert ist kann das Abspeichern gewählt werden, sonst<br>
-  *var myDbData_Flag = 0;*<br><br>
+  *var myDbData_Flag = 0;*<br>
 
 - *var myMqttData_Flag = 1;*<br>
 Flow-Vorgabe, ob eine MQTT Ausgabe für die Devices erfolgen soll<br>
@@ -131,7 +131,7 @@ Flow-Vorgabe, ob eine MQTT Ausgabe für die Devices erfolgen soll<br>
 &gt; 0 - MQTT Data Ausgabe<br>
 
   - für die Minimal-Version<br>
-    *var myMqttData_Flag = 0;*<br><br>
+    *var myMqttData_Flag = 0;*<br>
 
 - *var myMqttState_Flag = 1;*<br>
 *var myMqttState_DevName = "Weatherman";*<br>
@@ -141,7 +141,7 @@ Flow-Vorgabe, ob eine MQTT Status Ausgabe für die Devices erfolgen soll<br>
 &gt; 0 - MQTT Status Ausgabe
 
   - für die Minimal-Version<br>
-    *var myMqttData_Flag = 0;*<br><br>
+    *var myMqttState_Flag = 0;*<br>
 
 - *var myMqttAvg_Flag = 1;*<br>
 *var myMqttAvg_DevMqtt = "/myHOME/sensor/devices/Weatherman/avg";*<br>
@@ -150,13 +150,13 @@ Flow-Vorgabe, ob eine MQTT Ausgabe für den gleitenden Mittelwert (AVG) aller nu
 &gt; 0 - MQTT AVG Ausgabe<br>
 
   - für die Minimal-Version<br>
-    *var myMqttData_Flag = 0;*<br>
+    *var myMqttAvg_Flag = 0;*<br>
 
-Den 'Init-Flow' Node mit dem 'Done' Knopfschließen.
+Den 'Init-Flow' Node mit dem 'Done' Knopf schließen.
 
-Dann müssen noch in den MQTT-Ausgabe Nodes die MQTT-Broker Adressen eingetragen werden (nicht für Minimal-Version).
+Dann müssen noch in den MQTT-Ausgabe Nodes die MQTT-Broker Adressen eingetragen werden (gilt nicht für Minimal-Version).
 
-Gleiches gilt für die myHOME Datenbank Nodes.
+Ebenfalls müssen die myHOME Datenbank Nodes verbunden werden (gilt nicht für Minimal-Version).
 
 Abschließend wird der Weatherman Flow mit dem 'Deploy' Knopf veröffentlicht.
 
