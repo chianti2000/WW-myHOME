@@ -86,7 +86,39 @@ Erläuterungen zu den CSV-Spalten finden sich in der Beschreibung:
 
 Anpassung der barometrischen Ortshöhen-Beschreibung "hPa (190 m ü. N.N.)" in der Zeile 23 der Datei 'myHOME_Devices_xxx.csv' von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert reduziert werden soll.
 
-Optional können weitere Anpassungen in den Spalten ID_DEV, DEV_DESC, DEV_LOC, DEV_VAL_DESC, DEV_VAL_UNIT, DEV_MQTT, DEV_FL_ACT, DEV_FL_STO, DEV_FL_MQTT vorgenommen werden.
+Für den Weatherman werden die im JSON-String übergebenen 'name'-Bezeichnungen neu 'normiert' - damit braucht keine Code-Anpassung der Folge-Prozesse mehr erfolgen, wenn bei einer Firmware-Änderung die 'homematic_name'-Einträge geändert werden - bei den Folgeprozessen bleiben die festgelegten Device Bezeichner und Zuordnungen erhalten:
+
+  - DEV_TYP<br>
+    'normierte' Bezeichnung - z.B.: 'wm_temp'
+  - DEV_OLD_NAME<br>
+    JSON-Name alt - 'name' oder ''
+  - DEV_OLD_TYP<br>
+    JSON-Typ alt - z.B.: '1' oder ''
+
+Optional können Anpassungen für jeden DEVICE-Eintrag in den folgenden Spalten vorgenommen werden:
+
+  - ID_DEV<br>
+    lfd. Device-ID Nummer - Aufbau 'xxxyyy' mit
+    - xxx = der IP-Adresse 192.168.010.xxx<br>
+     '1' ... '254'
+    - yyy = 3stelliger Index<br>
+      '000' ... '999'
+  - DEV_DESC<br>
+    Device-Bezeichnung - z.B.: 'Wetterstation'
+  - DEV_LOC<br>
+    Device-Standort - z.B.: 'Garten' oder ''
+  - DEV_VAL_DESC<br>
+    Wert-Bezeichnung - z.B.: 'Temperatur-Aussen' oder ''
+  - DEV_VAL_UNIT<br>
+    Wert-Einheit - z.B.: '°C' oder ''
+  - DEV_MQTT<br>
+    MQTT-Ausgabepfad - z.B.: '/myHOME/sensor/devices/<DEV_NAME>' oder '' (für das DEVICE keine MQTT-Ausgabe)
+  - DEV_FL_ACT<br>
+    Flag-DEV Aktiv - '0 ... 255' (0 = DEVICE-Eintrag ist nicht aktiv)
+  - DEV_FL_STO<br>
+    Flag-DEV Speichern - '0 ... 255' (0 = DEVICE-Daten nicht in DB speichern)
+  - DEV_FL_MQTT<br>
+    Flag-DEV MQTT-Ausgabe - '0 ... 255' (0 = DEVICE-MQTT nicht ausgeben)
 
 Kopieren der angepaßten 'myHOME_Devices_xxx.csv' Dateien nach '/home/pi/.node-red/public'
 
@@ -162,5 +194,5 @@ Abschließend wird der Weatherman Flow mit dem 'Deploy' Knopf veröffentlicht.
 
 ### Version
 
-1.0.0.0 - 2018-12-23
+1.0.0.0 - 2018-12-26
 - Erstausgabe
