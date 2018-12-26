@@ -94,6 +94,10 @@ Für das Feinstaub Modul werden die im JSON-String übergebenen 'value_type'-Bez
   - DEV_OLD_TYP<br>
     JSON-Typ alt - z.B.: 'SDS_P1' oder ''
 
+Eine Gegenüberstellung der 'normierte' Bezeichnung zu den 'value_type' Bezeichnungen findet sich hier:
+
+[myHOME_Datenbank_SQL_Names_FS.txt](./bin/myHOME_Datenbank_SQL_Names_FS.txt)
+
 Optional können Anpassungen für jeden DEVICE-Eintrag in den folgenden Spalten vorgenommen werden:
 
   - ID_DEV<br>
