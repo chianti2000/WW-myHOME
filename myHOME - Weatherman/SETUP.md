@@ -192,7 +192,7 @@ Ebenfalls müssen die myHOME Datenbank Nodes verbunden werden (gilt nicht für M
 
 Abschließend wird der Weatherman Flow mit dem 'Deploy' Knopf veröffentlicht.
 
-Über &lt;node-RED URL&gt;/ui im Browser sollte nun der Weatherman Bereich mit den Anzeigen erscheinen.
+Über '&lt;node-RED URL&gt;/ui' im Browser sollte nun der Weatherman Bereich mit den Anzeigen erscheinen.
 
 Wenn alles wie vorgesehen funktioniert, können aus dem Weatherman-Flow die nicht benötigten Nodes (z.B.: alle Debug-Nodes, der Node Switch SYS  und evtl. auch die DB-OUT Database bzw. DB-OUT MQTT Bereiche) gelöscht werden. Ebenfalls können in den Nodes Switch VAR und Switch AVG die nicht benötigten Abfragen entfernt werden.
 
