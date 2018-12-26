@@ -95,6 +95,10 @@ Für den Weatherman werden die im JSON-String übergebenen 'name'-Bezeichnungen 
   - DEV_OLD_TYP<br>
     JSON-Typ alt - z.B.: '1' oder ''
 
+Eine Gegenüberstellung der 'normierte' Bezeichnung zu den 'homematic_name' Bezeichnungen findet sich hier:
+
+[myHOME_Datenbank_SQL_Names_WM.txt](./bin/myHOME_Datenbank_SQL_Names_WM.txt)
+
 Optional können Anpassungen für jeden DEVICE-Eintrag in den folgenden Spalten vorgenommen werden:
 
   - ID_DEV<br>
