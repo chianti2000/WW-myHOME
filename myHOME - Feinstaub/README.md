@@ -45,6 +45,12 @@ Flow für reine Node-RED GUI-Darstellung über MQTT:
 
 ![Node-RED - FLOW -  WW-myHOME - Feinstaub - MQTT](./img/NodeRED_FLOW_Feinstaub_MQTT_1.0.jpg)
 
+### MQTT Feinstaub in FHEM
+
+Feinstaub Daten in FHEM über MQTT Broker:
+
+![Node-RED - Feinstaub - MQTT - FHEM](./img/FHEM_Feinstaub.jpg)
+
 ### Version
 
 1.0.0.0 - 2018-12-07

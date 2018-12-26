@@ -42,6 +42,12 @@ Flow für reine Node-RED GUI-Darstellung über MQTT:
 
 ![Node-RED - FLOW -  WW-myHOME - Weatherman - MQTT](./img/NodeRED_FLOW_Weatherman_MQTT_1.0.jpg)
 
+### MQTT Weatherman in FHEM
+
+Weatherman Daten in FHEM über MQTT Broker:
+
+![Node-RED - Weatherman - MQTT - FHEM](./img/FHEM_Weatherman.jpg)
+
 ### Version
 
 1.0.0.0 - 2018-12-07
