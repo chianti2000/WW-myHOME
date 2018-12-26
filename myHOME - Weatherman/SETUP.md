@@ -196,7 +196,7 @@ Abschließend wird der Weatherman Flow mit dem 'Deploy' Knopf veröffentlicht.
 
 Wenn alles wie vorgesehen funktioniert, können aus dem Weatherman-Flow die nicht benötigten Nodes (z.B.: alle Debug-Nodes, der Node Switch SYS  und evtl. auch die DB-OUT Database bzw. DB-OUT MQTT Bereiche) gelöscht werden. Ebenfalls können in den Nodes Switch VAR und Switch AVG die nicht benötigten Abfragen entfernt werden.
 
-Man kann das Modul auch als reines 'Weatherman to MQTT' Modul ohne jegliche Anzeige einsetzen - dann können alle Switch xxx Nodes und alle Anzeigen gelöscht werden. Die Weatherman Ausgaben erfolgen dann an einen MQTT-Broker, der wiederum dafür sorgt, dass z.B. ein Node-RED MQTT Weatherman Client die Daten anzeigt oder dass FHEM die MQTT-Daten entgegen nimmt (siehe bin-Ordner).
+Man kann das Modul auch als reines 'Weatherman to MQTT' Modul ohne jegliche Anzeige einsetzen - dann können alle Switch xxx Nodes und alle Anzeigen gelöscht werden. Die Weatherman Ausgaben erfolgen dann an einen MQTT-Broker, der wiederum dafür sorgt, dass z.B. ein Node-RED MQTT Weatherman Client (myHOME_FLOW_Weatherman_MQTT_xxx.md) die Daten anzeigt oder dass FHEM die MQTT-Daten entgegen nimmt (fhem_cfg_WM.txt - siehe bin-Ordner).
 
 Mach der Bereinigung wird mit dem 'Deploy' Knopf die Änderung veröffentlicht.
 
