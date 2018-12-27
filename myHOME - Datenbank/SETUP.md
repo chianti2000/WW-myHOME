@@ -82,7 +82,8 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [(none)]> DROP DATABASE IF EXISTS `myHOME`;
 Query OK, 0 rows affected, 1 warning (0.00 sec)
 
-MariaDB [(none)]> CREATE DATABASE `myHOME` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin; Query OK, 1 row affected (0.00 sec)
+MariaDB [(none)]> CREATE DATABASE `myHOME` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+Query OK, 1 row affected (0.00 sec)
 
 MariaDB [(none)]> exit
 Bye
