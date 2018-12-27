@@ -82,7 +82,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [(none)]> DROP DATABASE IF EXISTS `myHOME`;
 Query OK, 0 rows affected, 1 warning (0.00 sec)
 
-MariaDB [(none)]> CREATE DATABASE `myHOME` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;             Query OK, 1 row affected (0.00 sec)
+MariaDB [(none)]> CREATE DATABASE `myHOME` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin; Query OK, 1 row affected (0.00 sec)
 
 MariaDB [(none)]> exit
 Bye
@@ -102,15 +102,15 @@ Geht der myHOME Datenbank-Node auf connected, ist die Datenbankverbindung erfogr
 
 Nun können die Datenbanktabellen SENSOR_DEVICES und SENSOR_READINGS angelegt werden, indem die 'Inject'-Flächen (links) der Nodes
 
-03 - Create table SENSOR_DEVICES<br>
-04 - Create table SENSOR_READINGS
+*03 - Create table SENSOR_DEVICES*<br>
+*04 - Create table SENSOR_READINGS*
 
 angeklickt werden - bei Erfolg erscheint die Meldung: Succesfully injected: timestamp.
 
 Abschließend werden noch die CSV-Konfigurationen in die Datenbank geladen, indem die 'Inject'-Flächen (links) der Nodes
 
-100 - Init SENSOR_DEVICES - Weatherman<br>
-101 - Init SENSOR_DEVICES - Feinstaub
+*100 - Init SENSOR_DEVICES - Weatherman*<br>
+*101 - Init SENSOR_DEVICES - Feinstaub*
 
 angeklickt werden - bei Erfolg erscheint die Meldung: Succesfully injected: timestamp.
 
