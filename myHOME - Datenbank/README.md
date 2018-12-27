@@ -1,9 +1,11 @@
 ## WW-myHOME - Datenbank
 
 ### Funktion
+
 Erstellen der myHOME-Datenbank mit Node-RED
 
 ### Details
+
 - Anlegen / Vorbelegen von Datentabellen zum Abspeichern von Sensordaten
 - für jedes Gerät/Sensor/Wert gibt es einen Konfigurationssatz, über den u.a. verschiedene Steuerungen vorgenommen werden können
 - Vorbelegungen für ...

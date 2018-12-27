@@ -201,7 +201,7 @@ Wenn alles wie vorgesehen funktioniert, können aus dem Feinstaub-Flow die nicht
 
 Man kann das Modul auch als reines 'Feinstaub to MQTT' Modul ohne jegliche Anzeige einsetzen - dann können alle Switch xxx Nodes und alle Anzeigen gelöscht werden. Die Feinstaub Ausgaben erfolgen dann an einen MQTT-Broker, der wiederum dafür sorgt, dass z.B. ein Node-RED MQTT Feinstaub Client (myHOME_FLOW_Feinstaub_MQTT_xxx.md) die Daten anzeigt oder dass FHEM die MQTT-Daten entgegen nimmt (fhem_cfg_WM.txt - siehe bin-Ordner).
 
-Mach der Bereinigung wird mit dem 'Deploy' Knopf die Änderung veröffentlicht.
+Nach der Bereinigung wird mit dem 'Deploy' Knopf die Änderung veröffentlicht.
 
 ### Version
 
