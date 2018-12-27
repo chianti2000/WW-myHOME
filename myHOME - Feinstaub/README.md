@@ -51,6 +51,12 @@ Feinstaub Daten in FHEM über MQTT Broker:
 
 ![Node-RED - Feinstaub - MQTT - FHEM](./img/FHEM_Feinstaub.jpg)
 
+### Hardware Feinstaub-Modul
+
+Feinstaub-Modul mit Selbstbau-Shield für BME280
+
+![Hardware - Feinstaub](./img/Hardware_Feinstaub.jpg)
+
 ### Version
 
 1.0.0.0 - 2018-12-07

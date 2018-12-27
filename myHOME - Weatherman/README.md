@@ -48,6 +48,12 @@ Weatherman Daten in FHEM über MQTT Broker:
 
 ![Node-RED - Weatherman - MQTT - FHEM](./img/FHEM_Weatherman.jpg)
 
+### Hardware Weatherman
+
+Weatherman (oben) mit Feinstaub-Modul (unten)
+
+![Hardware - Weatherman](./img/Hardware_Weatherman_Feinstaub.jpg)
+
 ### Version
 
 1.0.0.0 - 2018-12-07
