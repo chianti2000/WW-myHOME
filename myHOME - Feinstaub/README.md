@@ -59,7 +59,9 @@ Feinstaub-Modul mit Selbstbau-Shield für BME280
 
 ### Auswertungen Feinstaub-Modul
 
-![Link MDAVI - Feinstaub](https://www.madavi.de/sensor/graph.php?sensor=esp8266-5437269-sds011)
+[Link MDAVI - Feinstaub][a253acf3]
+  [a253acf3]: https://www.madavi.de/sensor/graph.php?sensor=esp8266-5437269-sds011
+
 
 ![Link MDAVI - Sensoren](https://www.madavi.de/sensor/graph.php?sensor=esp8266-5437269-bme280)
 
