@@ -91,29 +91,29 @@ Bye
 
 Damit ist die myHOME-Datenbank angelegt.
 
-Als nächstes wird - wie im Beschreibungsnode '02 - ...' aufgeführt - der myHOME Node mit der MariaDB Datenbank verbunden:
-- den myHOME Node mit einem Doppelklick öffnen und die Database myHOME editieren (Stift anklicken)
+Als nächstes wird - wie im Beschreibungsnode '02 - ...' aufgeführt - der 'myHOME' Node mit der MariaDB Datenbank verbunden:
+- den 'myHOME' Node mit einem Doppelklick öffnen und die 'Database myHOME' editieren (Stift anklicken)
 - die Host IP-Adresse der MariaDB (192.168.xxx.yyy), den Datenbank Port (3306), den Usernamen (root), das Passwort und den Datenbankname (myHOME) eingegeben
-- die Eingaben mit dem Update Knopf bestätigen
-- die Eingaben mit dem Done Knopf abshließen
+- die Eingaben mit dem 'Update' Knopf bestätigen
+- die Eingaben mit dem 'Done' Knopf abshließen
 
-Mach Einstellung der Datenbankparameter wird mit dem 'Deploy' Knopf die Konfiguration veröffentlicht.
+Nach Einstellung der Datenbankparameter wird mit dem 'Deploy' Knopf die Konfiguration veröffentlicht.
 
-Geht der myHOME Datenbank-Node auf connected, ist die Datenbankverbindung erfogreich hergestellt worden - ansonsten noch einmal die Verbindungsparameter überprüfen.
+Geht der 'myHOME' Datenbank-Node auf 'connected', ist die Datenbankverbindung erfogreich hergestellt worden - ansonsten noch einmal die Verbindungsparameter überprüfen.
 
-Nun können die Datenbanktabellen SENSOR_DEVICES und SENSOR_READINGS angelegt werden, indem die 'Inject'-Flächen (links) der Nodes
+Nun können die Datenbanktabellen 'SENSOR_DEVICES' und 'SENSOR_READINGS' angelegt werden, indem die 'Inject'-Flächen (links) der Nodes
 
 *03 - Create table SENSOR_DEVICES*<br>
 *04 - Create table SENSOR_READINGS*
 
-angeklickt werden - bei Erfolg erscheint die Meldung: Succesfully injected: timestamp.
+angeklickt werden - bei Erfolg erscheint die Meldung: 'Succesfully injected: timestamp'.
 
 Abschließend werden noch die CSV-Konfigurationen in die Datenbank geladen, indem die 'Inject'-Flächen (links) der Nodes
 
 *100 - Init SENSOR_DEVICES - Weatherman*<br>
 *101 - Init SENSOR_DEVICES - Feinstaub*
 
-angeklickt werden - bei Erfolg erscheint die Meldung: Succesfully injected: timestamp.
+angeklickt werden - bei Erfolg erscheint die Meldung: 'Succesfully injected: timestamp'.
 
 Damit ist die myHOME MariaDB betriebsbereit.
 
