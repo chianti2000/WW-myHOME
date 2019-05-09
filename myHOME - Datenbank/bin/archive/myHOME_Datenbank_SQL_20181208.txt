@@ -6,17 +6,6 @@ Grundinstallation der myHOME Datenbank unter RASPBIAN  auf Raspberry Pi
 Erstellt: 01.11.2018 - Wolfram Winter
    Stand: 23.12.2018 - Wolfram Winter
           - Verifiziert
-          09.05.2019 - Wolfram Winter
-          - Weatherman Firmware 107 Verifizierung
-            - Barometerwerte absolut und relativ gesetzt
-              - 'wm_baro'    - WM Messung (Baro absolut)
-              - 'wm_baro_nn' - WM Berechnungswert (Baro relativ)
-          - Feinstaub
-            - globale Platzhalter Temperatur, Luftfeuchte, Baro
-              - 'fs_glb_temp'
-              - 'fs_glb_hum'
-              - 'fs_glb_baro'    - FS Messung (Baro absolut)
-              - 'fs_glb_baro_nn' - FS Berechnungswert (Baro relativ)
 
 =======================================================================
 
@@ -158,7 +147,7 @@ INSERT INTO SENSOR_DEVICES SET `ID_DEV` = 0,  `DEV_NAME` = 'DEV_NAME - ???', `DE
 # xxx = von der IP-Adresse 192.168.010.xxx 
 # yyy = 3stelliger Index - hier: interne param-Nummerierung des Weatherman
 
-# Weatherman - Firmware stable 58        # Weatherman - Firmware 87 / Firmware 107
+# Weatherman - Firmware stable 58        # Weatherman - Firmware 87
 # System-Infos
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100901', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sys_mac-adr',         `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'MAC-Adresse',      `DEV_VAL_UNIT` = '',    `DEV_OLD_NAME` = 'Systeminfo', `DEV_OLD_TYP` = 'MAC-Adresse',      `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 0 , `DEV_FL_MQTT` = 0;
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100902', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sys_hm-ccu-ip',       `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Homematic CCU IP', `DEV_VAL_UNIT` = '',    `DEV_OLD_NAME` = 'Systeminfo', `DEV_OLD_TYP` = 'Homematic_CCU_ip', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 0 , `DEV_FL_MQTT` = 0;
@@ -168,11 +157,11 @@ INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100905', `DEV_NAME` = 'Weatherman', `DE
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100906', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sys_zeitpunkt',       `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Zeitpunkt',        `DEV_VAL_UNIT` = '',    `DEV_OLD_NAME` = 'Systeminfo', `DEV_OLD_TYP` = 'zeitpunkt',        `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 0 , `DEV_FL_MQTT` = 0;
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100907', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sys_firmware',        `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Firmware',         `DEV_VAL_UNIT` = '',    `DEV_OLD_NAME` = 'Systeminfo', `DEV_OLD_TYP` = 'firmware',         `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 0 , `DEV_FL_MQTT` = 0;
 
-# Weatherman - Firmware stable 58        # Weatherman - Firmware 87 / Firmware 107
+# Weatherman - Firmware stable 58        # Weatherman - Firmware 87
 # name: 0: w_ip                          # name: 0: w_ip
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100000', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sys_ip', `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'IP-Adresse', `DEV_VAL_UNIT` = '', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '0', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 0, `DEV_FL_MQTT` = 0;
 
-# Weatherman - Firmware stable 58        # Weatherman - Firmware 87 / Firmware 107
+# Weatherman - Firmware stable 58        # Weatherman - Firmware 87
 # name: 1: w_temperature                 # name: 1: w_temperature
 # name:21: w_windchill                   # name:21: w_windchill
 # name: 9: w_taupunkt                    # name: 9: w_taupunkt
@@ -182,13 +171,13 @@ INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100021', `DEV_NAME` = 'Weatherman', `DE
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100009', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_temp_dewpoint',  `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Temperatur-Taupunkt', `DEV_VAL_UNIT` = '°C', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '9',  `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 ,  `DEV_FL_MQTT` = 1;
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100014', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_temp_sky',       `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Temperatur-Himmel',   `DEV_VAL_UNIT` = '°C', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '14', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 ,  `DEV_FL_MQTT` = 1;
 
-# Weatherman - Firmware stable 58        # Weatherman - Firmware 87 / Firmware 107
+# Weatherman - Firmware stable 58        # Weatherman - Firmware 87
 # name: 2: w_humidity                    # name: 2: w_feuchte_rel
 # name:17: w_hum_abs                     # name:17: w_feuchte_abs
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100002', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_hum_pro', `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Feuchte-Außen', `DEV_VAL_UNIT` = '%',    `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '2',  `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100017', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_hum_abs', `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Feuchte-Außen', `DEV_VAL_UNIT` = 'g/m³', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '17', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
 
-# Weatherman - Firmware stable 58        # Weatherman - Firmware 87 / Firmware 107
+# Weatherman - Firmware stable 58        # Weatherman - Firmware 87
 # name:18: w_rain_activity               # name:18: w_regensensor_wert
 # name: 7: w_rain_status                 # name: 7: w_regenmelder
 # name: 8: w_rain_intensity              # name: 8: w_regenstaerke
@@ -204,16 +193,13 @@ INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100027', `DEV_NAME` = 'Weatherman', `DE
 #                                        # name:32: w_regenstunden_heute  --> 'wm_rain_hours_24'
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100032', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_rain_hours_24',  `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Regen-Std. heute',  `DEV_VAL_UNIT` = 'h',    `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '32', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
 
-# Weatherman - Firmware stable 58        # Weatherman - Firmware 87 / Firmware 107
+# Weatherman - Firmware stable 58        # Weatherman - Firmware 87
 # name: 3: w_barometer                   # name: 3: w_barometer
 # name:11: w_barotrend                   # name:11: w_barotrend
-INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100003', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_baro',       `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Luftdruck',       `DEV_VAL_UNIT` = 'hPa', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '3',  `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
+INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100003', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_baro_nn',    `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Luftdruck',       `DEV_VAL_UNIT` = 'hPa', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '3',  `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100011', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_baro_trend', `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Luftdruck-Trend', `DEV_VAL_UNIT` = '',    `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '11', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
-# Platzhalter fuer berechneten NN-Baro-Wert
 
-INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100701', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_baro_nn',    `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Luftdruck NN',    `DEV_VAL_UNIT` = 'hPa', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '701', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
-
-# Weatherman - Firmware stable 58        # Weatherman - Firmware 87 / Firmware 107
+# Weatherman - Firmware stable 58        # Weatherman - Firmware 87
 # name: 4: w_wind_avg                    # name: 4: w_wind_mittel
 # name: 5: w_wind_peak                   # name: 5: w_wind_spitze
 # name:24: w_windstaerke                 # name:24: w_windstaerke
@@ -225,7 +211,7 @@ INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100024', `DEV_NAME` = 'Weatherman', `DE
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100023', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_wind_direction', `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Wind-Richtung',       `DEV_VAL_UNIT` = '',    `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '23', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100006', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_wind_dir',       `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Wind-Richtung',       `DEV_VAL_UNIT` = '°',   `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '6',  `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
 
-# Weatherman - Firmware stable 58        # Weatherman - Firmware 87 / Firmware 107
+# Weatherman - Firmware stable 58        # Weatherman - Firmware 87
 # name:10: w_lux                         # name:10: w_lux
 # name:15: w_sun_temp                    # name:15: w_sonnentemperatur
 # name:22: w_diff_temp                   # name:22: w_sonne_diff_temp
@@ -241,9 +227,9 @@ INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100013', `DEV_NAME` = 'Weatherman', `DE
 #                                        # name:26: w_sonnenstunden_heute
 #                                        # name:30: w_minuten_vor_sa
 #                                        # name:31: w_minuten_vor su
-INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100026', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sun_today_hours',    `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Sonnen-Std. heute',   `DEV_VAL_UNIT` = 'h',   `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '26', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
-INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100030', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sun_before_sunrise', `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Sonne-vor Aufgang',   `DEV_VAL_UNIT` = 'min', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '30', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
-INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100031', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sun_before_sunset',  `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Sonne-vor Untergang', `DEV_VAL_UNIT` = 'min', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '31', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
+INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100026', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sun_today_hours',    `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Sonnen-Stunden heute',  `DEV_VAL_UNIT` = 'h',   `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '26', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
+INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100030', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sun_before_sunrise', `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Sonne - vor Aufgang',   `DEV_VAL_UNIT` = 'min', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '30', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
+INSERT INTO SENSOR_DEVICES SET `ID_DEV`='100031', `DEV_NAME` = 'Weatherman', `DEV_TYP` = 'wm_sun_before_sunset',  `DEV_DESC` = 'Wetterstation', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Sonne - vor Untergang', `DEV_VAL_UNIT` = 'min', `DEV_OLD_NAME` = 'name', `DEV_OLD_TYP` = '31', `DEV_MQTT` = '/myHOME/sensor/devices/Weatherman', `DEV_FL_STO` = 1 , `DEV_FL_MQTT` = 1;
 
 # Weatherman - Firmware stable 58        # Weatherman - Firmware 87
 # name:25: w_bodenfeuchte                # name:25: w_bodenfeuchte
@@ -274,13 +260,6 @@ INSERT INTO SENSOR_DEVICES SET `ID_DEV`='101801', `DEV_NAME` = 'Feinstaub', `DEV
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='101802', `DEV_NAME` = 'Feinstaub', `DEV_TYP` = 'fs_min_micro', `DEV_DESC` = 'Feinstaub-Sensor', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'min Micro', `DEV_VAL_UNIT` = '',    `DEV_OLD_NAME` = 'value_type', `DEV_OLD_TYP` = 'min_micro', `DEV_MQTT` = '/myHOME/sensor/devices/Feinstaub', `DEV_FL_STO` = 0, `DEV_FL_MQTT` = 1;
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='101803', `DEV_NAME` = 'Feinstaub', `DEV_TYP` = 'fs_max_micro', `DEV_DESC` = 'Feinstaub-Sensor', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'max Micro', `DEV_VAL_UNIT` = '',    `DEV_OLD_NAME` = 'value_type', `DEV_OLD_TYP` = 'max_micro', `DEV_MQTT` = '/myHOME/sensor/devices/Feinstaub', `DEV_FL_STO` = 0, `DEV_FL_MQTT` = 1;
 INSERT INTO SENSOR_DEVICES SET `ID_DEV`='101804', `DEV_NAME` = 'Feinstaub', `DEV_TYP` = 'fs_signal',    `DEV_DESC` = 'Feinstaub-Sensor', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Signal',    `DEV_VAL_UNIT` = 'dBm', `DEV_OLD_NAME` = 'value_type', `DEV_OLD_TYP` = 'signal',    `DEV_MQTT` = '/myHOME/sensor/devices/Feinstaub', `DEV_FL_STO` = 0, `DEV_FL_MQTT` = 1;
-
-# Platzhalter fuer Temperatur, Luftfeuchte, Baro-Werte
- 
-INSERT INTO SENSOR_DEVICES SET `ID_DEV`='101701', `DEV_NAME` = 'Feinstaub', `DEV_TYP` = 'fs_glb_temp',    `DEV_DESC` = 'Feinstaub-Sensor', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Temperatur',   `DEV_VAL_UNIT` = '°C',  `DEV_OLD_NAME` = 'value_type', `DEV_OLD_TYP` = 'fs_glb_temp',    `DEV_MQTT` = '/myHOME/sensor/devices/Feinstaub', `DEV_FL_STO` = 1, `DEV_FL_MQTT` = 1;
-INSERT INTO SENSOR_DEVICES SET `ID_DEV`='101702', `DEV_NAME` = 'Feinstaub', `DEV_TYP` = 'fs_glb_hum',     `DEV_DESC` = 'Feinstaub-Sensor', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Luftfeuchte',  `DEV_VAL_UNIT` = '%',   `DEV_OLD_NAME` = 'value_type', `DEV_OLD_TYP` = 'fs_glb_hum',     `DEV_MQTT` = '/myHOME/sensor/devices/Feinstaub', `DEV_FL_STO` = 1, `DEV_FL_MQTT` = 1;
-INSERT INTO SENSOR_DEVICES SET `ID_DEV`='101703', `DEV_NAME` = 'Feinstaub', `DEV_TYP` = 'fs_glb_baro',    `DEV_DESC` = 'Feinstaub-Sensor', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Luftdruck',    `DEV_VAL_UNIT` = 'hPa', `DEV_OLD_NAME` = 'value_type', `DEV_OLD_TYP` = 'fs_glb_baro',    `DEV_MQTT` = '/myHOME/sensor/devices/Feinstaub', `DEV_FL_STO` = 1, `DEV_FL_MQTT` = 1;
-INSERT INTO SENSOR_DEVICES SET `ID_DEV`='101704', `DEV_NAME` = 'Feinstaub', `DEV_TYP` = 'fs_glb_baro_nn', `DEV_DESC` = 'Feinstaub-Sensor', `DEV_LOC` = 'Garten', `DEV_VAL_DESC` = 'Luftdruck NN', `DEV_VAL_UNIT` = 'hPa', `DEV_OLD_NAME` = 'value_type', `DEV_OLD_TYP` = 'fs_glb_baro_nn', `DEV_MQTT` = '/myHOME/sensor/devices/Feinstaub', `DEV_FL_STO` = 1, `DEV_FL_MQTT` = 1;
 
 # Test
 # INSERT INTO SENSOR_DEVICES SET `ID_DEV` = 2;
