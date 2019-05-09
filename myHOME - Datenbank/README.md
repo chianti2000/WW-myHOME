@@ -9,15 +9,15 @@ Erstellen der myHOME-Datenbank mit Node-RED
 - Anlegen / Vorbelegen von Datentabellen zum Abspeichern von Sensordaten
 - für jedes Gerät/Sensor/Wert gibt es einen Konfigurationssatz, über den u.a. verschiedene Steuerungen vorgenommen werden können
 - Vorbelegungen für ...
-  - Weatherman - Firmware 58 und Firmware 87
-  - Feinstaub  - Firmware NRZ-2018-111
+  - Weatherman - Firmware 58, Firmware 87 und Firmware 107
+  - Feinstaub  - Firmware NRZ-2018-111, NRZ-2018-123B
 - weitere Datenbank Konfigurationen zu Management und Auswertungen folgen ...
 
 ### Node-RED - FLOW
 
 Gesamter Flow für alle Optionen:
 
-![Node-RED - FLOW -  WW-myHOME - Datenbank](./img/NodeRED_FLOW_Datenbank_1.0.jpg)
+![Node-RED - FLOW -  WW-myHOME - Datenbank](./img/NodeRED_FLOW_Datenbank_1.1.jpg)
 
 ### Datenbank - SQL-Details
 
@@ -115,6 +115,9 @@ READ_FLAG       internes Flag           0 ... 255
 ```
 
 ### Version
+
+1.1.0.0 - 2018-05-09
+- Fortschreibung - siehe 'SQL-Details zur WW-myHOME-Datenbank'
 
 1.0.0.0 - 2018-12-23
 - Erstausgabe
