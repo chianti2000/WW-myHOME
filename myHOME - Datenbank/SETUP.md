@@ -16,7 +16,7 @@ Die MariaDB SQL-Datenbank muss installiert und für die Benutzung konfiguriert s
 
 ### Setup - Teil 2 - Node-RED
 
-Überprüfen, ob Node-RED in der aktuellen Version installiert ist. Weiter muss das Modul 'node-red-node-mysql' installiert sein - siehe im Node-RED Fenster Einstellungen oben rechts und dann unter dem Menü-Eintrag 'Manage palette'. Unter dem Reiter 'Install' kann das Modul gesucht und installiert werden - falls es schon installiert ist, kann unter 'Nodes' die Version geprüft und evtl. aktualisiert werden (derzeit in der Version 0.0.17).
+Überprüfen, ob Node-RED in der aktuellen Version (derzeit in der Version 0.20.5) installiert ist. Weiter muss das Modul 'node-red-node-mysql' installiert sein - siehe im Node-RED Fenster Einstellungen oben rechts und dann unter dem Menü-Eintrag 'Manage palette'. Unter dem Reiter 'Install' kann das Modul gesucht und installiert werden - falls es schon installiert ist, kann unter 'Nodes' die Version geprüft und evtl. aktualisiert werden (derzeit in der Version 0.0.18).
 
 Für eigene Node-RED Erweiterungen sollte man einen 'public' Ordner anlegen (TTY-Konsole - als pi user):
 ```
@@ -118,6 +118,9 @@ angeklickt werden - bei Erfolg erscheint die Meldung: 'Succesfully injected: tim
 Damit ist die myHOME MariaDB betriebsbereit.
 
 ### Version
+
+1.1.0.0 - 2019-05-10
+- Fortschreibung - siehe 'Readme - SQL-Details zur WW-myHOME-Datenbank'
 
 1.0.0.0 - 2018-12-27
 - Erstausgabe

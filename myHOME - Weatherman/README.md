@@ -59,7 +59,7 @@ Weatherman (oben) mit Feinstaub-Modul (unten)
 
 ### Version
 
-1.1.0.0 - 2018-05-10
+1.1.0.0 - 2019-05-10
 - Aktualisierung und Verifikation für Firmware 107
 
 1.0.0.0 - 2018-12-07

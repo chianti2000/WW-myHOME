@@ -65,7 +65,7 @@ Feinstaub-Modul mit Selbstbau-Shield für BME280
 
 ### Version
 
-1.1.0.0 - 2018-05-10
+1.1.0.0 - 2019-05-10
 - Aktualisierung und Verifikation für Firmware 123B
 
 1.0.0.0 - 2018-12-07

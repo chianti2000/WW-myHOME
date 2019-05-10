@@ -15,13 +15,13 @@ Als Hardware Grundlage wird ein Raspberry Pi mit einer aktuellen Debian Version 
 - Minimal-Version
   - Funktion: Übernahme, Aufbereitung und Visualisierung der Weatherman Sensordaten
   - Software Module:
-    - Node-RED Installation (z.Z.: latest version ... v0.19.5 (npm))
+    - Node-RED Installation (z.Z.: latest version ... v0.20.5 (npm))
 
 
 - Standard-Version
   - Funktion: Übernahme, Aufbereitung, Deployment und Visualisierung der Weatherman Sensordaten
   - Software Module:
-    - Node-RED Installation (z.Z.: latest version ... v0.19.5 (npm))
+    - Node-RED Installation (z.Z.: latest version ... v0.20.5 (npm))
     - MQTT Broker - Mosquitto
     - optional: MariaDB SQL-Datenbank
 
@@ -29,7 +29,7 @@ Als Hardware Grundlage wird ein Raspberry Pi mit einer aktuellen Debian Version 
 - Maximal-Version
   - Funktion: wie Standard-Version - nur mit allen Optionen und (Debug) Möglichkeiten zur eigenen Anpassung
   - Software Module:
-    - Node-RED Installation (z.Z.: latest version ... v0.19.5 (npm))
+    - Node-RED Installation (z.Z.: latest version ... v0.20.5 (npm))
     - MQTT Broker - Mosquitto
     - MariaDB SQL-Datenbank
 
@@ -210,6 +210,9 @@ Man kann das Modul auch als reines 'Feinstaub to MQTT' Modul ohne jegliche Anzei
 Nach der Bereinigung wird mit dem 'Deploy' Knopf die Änderung veröffentlicht.
 
 ### Version
+
+1.1.0.0 - 2019-05-10
+- Anpassung für barometrische Höhenkorrektur 'myBaro_NN'
 
 1.0.0.0 - 2018-12-26
 - Erstausgabe
