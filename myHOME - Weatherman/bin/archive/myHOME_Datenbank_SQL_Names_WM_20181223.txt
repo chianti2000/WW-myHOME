@@ -5,18 +5,13 @@ Uebersicht der Uebersetzungstabelle zwischen WM und myHOME Datenbank
 Erstellt: 01.11.2018 - Wolfram Winter
    Stand: 23.12.2018 - Wolfram Winter
           - Verifiziert
-          10.05.2019 - Wolfram Winter
-          - Weatherman Firmware 107 Verifizierung
-            - Barometerwerte absolut und relativ gesetzt
-              - 'wm_baro'    - WM Messung (Baro absolut)
-              - 'wm_baro_nn' - WM Berechnungswert (Baro relativ)
 
 =======================================================================
 
 # Weatherman
 
 =================================================================================================
-# myHOME DB-Bezeichner  WM-Index     Firmware 58 stable  Firmware 86             Firmware 87 / 107
+# myHOME DB-Bezeichner  WM-Index     Firmware 58 stable  Firmware 86             Firmware 87
 =================================================================================================
 # Systeminfo                         # keine Aenderungen
 
@@ -48,7 +43,7 @@ wm_rain_volume_24       # name:20:   w_rain_volume_24    w_regen_mm_heute       
 wm_rain_yesterday       # name:27:   w_rain_yesterday    --> entfallen           w_regen_mm_gestern
 wm_rain_hours_24        # name:32:                       w_regenstunden_heute    w_regenstunden_heute
 
-wm_baro                 # name: 3:   w_barometer         w_barometer             w_barometer
+wm_baro_nn              # name: 3:   w_barometer         w_barometer             w_barometer
 wm_baro_trend           # name:11:   w_barotrend         w_barotrend             w_barotrend
 
 wm_wind_avg             # name: 4:   w_wind_avg          w_wind_mittel           w_wind_mittel
@@ -69,7 +64,3 @@ wm_sun_before_sunset    # name:31:                       w_minuten_vor_su       
 
 wm_ground_hum           # name:25:                       w_bodenfeuchte          w_bodenfeuchte
 =================================================================================================
-
-Berechnungsdaten:
------------------
-wm_baro_nn              # name:701:  w_barometer         w_barometer             w_barometer

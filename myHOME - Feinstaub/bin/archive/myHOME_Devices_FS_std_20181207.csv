@@ -9,12 +9,8 @@
 101022;"Feinstaub";"fs_bmp_baro";"Feinstaub-Sensor";"Garten";"Luftdruck";"hPa";"value_type";"BMP_pressure";"/myHOME/sensor/devices/Feinstaub";0;1;1;0;
 101031;"Feinstaub";"fs_bme280_temp";"Feinstaub-Sensor";"Garten";"Temperatur";"°C";"value_type";"BME280_temperature";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
 101032;"Feinstaub";"fs_bme280_hum";"Feinstaub-Sensor";"Garten";"Luftfeuchte";"%";"value_type";"BME280_humidity";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
-101033;"Feinstaub";"fs_bme280_baro";"Feinstaub-Sensor";"Garten";"Luftdruck";"hPa";"value_type";"BME280_pressure";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
+101033;"Feinstaub";"fs_bme280_baro";"Feinstaub-Sensor";"Garten";"Luftdruck";"hPa (190 m ü. N.N.)";"value_type";"BME280_pressure";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
 101801;"Feinstaub";"fs_samples";"Feinstaub-Sensor";"Garten";"Messungen";"";"value_type";"samples";"/myHOME/sensor/devices/Feinstaub";1;0;1;0;
 101802;"Feinstaub";"fs_min_micro";"Feinstaub-Sensor";"Garten";"min Micro";"";"value_type";"min_micro";"/myHOME/sensor/devices/Feinstaub";1;0;1;0;
 101803;"Feinstaub";"fs_max_micro";"Feinstaub-Sensor";"Garten";"max Micro";"";"value_type";"max_micro";"/myHOME/sensor/devices/Feinstaub";1;0;1;0;
 101804;"Feinstaub";"fs_signal";"Feinstaub-Sensor";"Garten";"Signal";"dBm";"value_type";"signal";"/myHOME/sensor/devices/Feinstaub";1;0;1;0;
-101701;"Feinstaub";"fs_glb_temp";"Feinstaub-Sensor";"Garten";"Temperatur";"°C";"value_type";"fs_glb_temp";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
-101702;"Feinstaub";"fs_glb_hum";"Feinstaub-Sensor";"Garten";"Luftfeuchte";"%";"value_type";"fs_glb_hum";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
-101703;"Feinstaub";"fs_glb_baro";"Feinstaub-Sensor";"Garten";"Luftdruck";"hPa";"value_type";"fs_glb_baro";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
-101704;"Feinstaub";"fs_glb_baro_nn";"Feinstaub-Sensor";"Garten";"Luftdruck NN";"hPa";"value_type";"fs_glb_baro_nn";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;

@@ -3,10 +3,10 @@
 101902;"Feinstaub";"fs_sys_firmware";"Feinstaub-Sensor";"Garten";"Firmware";"";"";"software_version";"/myHOME/sensor/devices/Feinstaub";1;0;1;0;
 101001;"Feinstaub";"fs_sds011_pm2_5";"Feinstaub-Sensor";"Garten";"PM2.5";"µg/m³";"value_type";"SDS_P1";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
 101002;"Feinstaub";"fs_sds011_pm10";"Feinstaub-Sensor";"Garten";"PM10";"µg/m³";"value_type";"SDS_P2";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
-101011;"Feinstaub";"fs_temp";"Feinstaub-Sensor";"Garten";"Temperatur";"°C";"value_type";"temperature";"/myHOME/sensor/devices/Feinstaub";0;1;1;0;
-101012;"Feinstaub";"fs_hum";"Feinstaub-Sensor";"Garten";"Luftfeuchte";"%";"value_type";"humidity";"/myHOME/sensor/devices/Feinstaub";0;1;1;0;
-101021;"Feinstaub";"fs_bmp_temp";"Feinstaub-Sensor";"Garten";"Temperatur";"°C";"value_type";"BMP_temperature";"/myHOME/sensor/devices/Feinstaub";0;1;1;0;
-101022;"Feinstaub";"fs_bmp_baro";"Feinstaub-Sensor";"Garten";"Luftdruck";"hPa";"value_type";"BMP_pressure";"/myHOME/sensor/devices/Feinstaub";0;1;1;0;
+101011;"Feinstaub";"fs_temp";"Feinstaub-Sensor";"Garten";"Temperatur";"°C";"value_type";"temperature";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
+101012;"Feinstaub";"fs_hum";"Feinstaub-Sensor";"Garten";"Luftfeuchte";"%";"value_type";"humidity";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
+101021;"Feinstaub";"fs_bmp_temp";"Feinstaub-Sensor";"Garten";"Temperatur";"°C";"value_type";"BMP_temperature";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
+101022;"Feinstaub";"fs_bmp_baro";"Feinstaub-Sensor";"Garten";"Luftdruck";"hPa";"value_type";"BMP_pressure";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
 101031;"Feinstaub";"fs_bme280_temp";"Feinstaub-Sensor";"Garten";"Temperatur";"°C";"value_type";"BME280_temperature";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
 101032;"Feinstaub";"fs_bme280_hum";"Feinstaub-Sensor";"Garten";"Luftfeuchte";"%";"value_type";"BME280_humidity";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
 101033;"Feinstaub";"fs_bme280_baro";"Feinstaub-Sensor";"Garten";"Luftdruck";"hPa";"value_type";"BME280_pressure";"/myHOME/sensor/devices/Feinstaub";1;1;1;0;
