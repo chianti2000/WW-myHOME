@@ -85,7 +85,7 @@ Montagematerial:
 
 ![WW-myHOME - BME-Shield - 3D-Druck-V2-1](./img/UWK_411.jpg)
 
-Montage der Lüfterplatte mit Fixierbolzen (können auch weggelassen werden) und Blechschrauben (Rundkopf 3x10mm):
+Montage der Lüfterplatte mit Fixierbolzen (können auch weggelassen werden) und mit 4 Blechschrauben Rundkopf 3,5x13mm:
 
 ![WW-myHOME - BME-Shield - 3D-Druck-V2-2](./img/UWK_412.jpg)
 
@@ -93,28 +93,28 @@ Vormontage der Kabelfixierung und des Sensor-Adapters mit Membranhalter (Kabel: 
 
 ![WW-myHOME - BME-Shield - 3D-Druck-V2-3](./img/UWK_413.jpg)
 
-Montage der Sensorplatine und Durchleitung der Stromversorgungsdrähte für den Lüfter - dabei sollte die Sensorplatine richtig positioniert sein - mittig, unten, keine Wandberührung - fixiert wird das ganze mit einer einzelnen Blechschraube:
+Montage der Sensorplatine und Durchleitung der Stromversorgungsdrähte für den Lüfter - dabei sollte die Sensorplatine richtig positioniert sein - mittig, unten, keine Wandberührung - fixiert wird das ganze mit einer einzelnen Blechschraube Rundkopf 3,5x13mm:
 
 ![WW-myHOME - BME-Shield - 3D-Druck-V2-4](./img/UWK_414.jpg)
 ![WW-myHOME - BME-Shield - 3D-Druck-V2-5](./img/UWK_415.jpg)
 ![WW-myHOME - BME-Shield - 3D-Druck-V2-6](./img/UWK_416.jpg)
 
-Montage des Lüfters - wahlweise kann für Testzwecke im Rand auch ein Mikroschalter verbaut werden:
+Montage des Lüfters mit 4 Blechschrauben Rundkopf 3,5x19mm - wahlweise kann für Testzwecke im Rand auch ein Mikroschalter verbaut werden:
 
 ![WW-myHOME - BME-Shield - 3D-Druck-V2-7](./img/UWK_417.jpg)
 
-Zusammenbau der beiden Deckkappen (hier mit Alu-Reflexionsschutz) und Vormontage der Halterungsschraube in der obersten Kappe:
+Zusammenbau der beiden Deckkappen mit 4 Blechschrauben Rundkopf 3,5x13mm (hier mit Alu-Reflexionsschutz) und Vormontage der Halterungsschraube in der obersten Kappe:
 
 ![WW-myHOME - BME-Shield - 3D-Druck-V2-8](./img/UWK_418.jpg)
 
-Montage der beiden Kappen und der Sensoreinheit:
+Montage der beiden Kappen und der Sensoreinheit mit 4 Blechschrauben Rundkopf 3,5x13mm:
 
 ![WW-myHOME - BME-Shield - 3D-Druck-V2-9](./img/UWK_419.jpg)
 
 ### BME-Shield - Sonstiges
 
 Tipps:
-- Natürlich sollten alle 3D-Druckteile mit einem (weissen) UV-beständigem Acryl-Lack überzogen worden sein. 
+- Natürlich sollten alle 3D-Druckteile mit einem (weissen) UV-beständigem Acryl-Lack überzogen worden sein.
 
 - Die Sensorplatine des BME280 vorsichtig mit Hilfe eines kleinen Pinsels mit 'Plastik 70' bestreichen (den Sensor aussparen !!).
 
