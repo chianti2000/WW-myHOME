@@ -148,11 +148,11 @@ Mit einem Doppelklick auf den Node 'Init-Flow' die Anpassungen für das Weatherm
 Altitude [m] - eigene Ortshöhe über N.N. zur Berechnung des barometrischen Luftdrucks in Bezug zu N.N.. Von dem Wert '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert umgerechnet werden soll, ändern<br>
   - Definitionen:
     - absoluter Luftdruck = Luftdruckmessung am Standort des WM (ohne Korrekturwert)
-    - relativer Luftdruck - auf Meereshoehe reduzierter Luftdruckmesswert NN des WM (mit Korrekturwert)
-  - Wird im Weatherman eine Ortshoehe <> 0 eingetragen erfolgt die Ausgabe im Feld 'w_barometer' als relativer Luftdruckwert => dann muss hier 'var myBaro_NN = -<Ortshoehe>;' gesetzt werden, um auch den absoluten Luftdruckwert ermitteln zu können
-  - Wird im Weatherman eine Ortshoehe == 0 (--bitte so einstellen--) eingetragen erfolgt die Ausgabe im Feld 'w_barometer' als absoluter Luftdruckwert => dann muss hier 'var myBaro_NN = <Ortshoehe>;' gesetzt werden, um auch den relativen Luftdruckwert ermitteln zu können
-  - Wird hier 'var myBaro_NN = 0;' eingegeben, dann wird der Luftdruckwert des WM (gleich welche Ortshoehe im 'param:20' eingestellt ist) ohne Korrektur ausgegeben
-  - Mit der Ortshoehe werden automatisch die richtigen Werte fuer 'wm_baro' (absoluter Luftdruck) und 'wm_baro_nn' (relativer Luftdruck) gesetzt - das gilt auch fuer die Werteanzeigen 'Luftdruck' und 'Luftdruck NN' im Dashboard
+    - relativer Luftdruck - auf Meereshöhe reduzierter Luftdruckmesswert NN des WM (mit Korrekturwert)
+  - Wird im Weatherman eine Ortshöhe <> 0 eingetragen, erfolgt die Ausgabe im Feld 'w_barometer' als relativer Luftdruckwert => dann muss hier 'var myBaro_NN = -<Ortshoehe>;' gesetzt werden, um auch den absoluten Luftdruckwert ermitteln zu können.
+  - Wird im Weatherman eine Ortshoehe == 0 (--bitte so einstellen--) eingetragen, erfolgt die Ausgabe im Feld 'w_barometer' als absoluter Luftdruckwert => dann muss hier 'var myBaro_NN = <Ortshoehe>;' gesetzt werden, um auch den relativen Luftdruckwert ermitteln zu können.
+  - Wird hier 'var myBaro_NN = 0;' eingegeben, dann wird der Luftdruckwert des WM (gleich welche Ortshöhe im 'param:20' eingestellt ist) ohne Korrektur ausgegeben.
+  - Mit der Ortshöhe werden automatisch die richtigen Werte für 'wm_baro' (absoluter Luftdruck) und 'wm_baro_nn' (relativer Luftdruck) gesetzt - das gilt auch fuer die Werteanzeigen 'Luftdruck' und 'Luftdruck NN' im Dashboard.
 
 - *var myTmpNewOnly_Default = 1;*<br>
 Flow-Vorgabe, ob nur neue Readings (Werte) oder alle Readings eines Devices berücksichtigt werden sollen<br>

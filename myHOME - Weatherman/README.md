@@ -9,7 +9,10 @@
   - dazu muss beim Weatherman im 'Expertenmodus' eingestellt werden:
     - CCU-Betrieb >> JSON-Daten an Server@CCU-IP
       - http://<IP-Weatherman\>/?ccu:<IP-NodeRED-Server\>:
-      - http://<IP-Weatherman\>/?param:12:1:
+      - Firmware 58:
+        - http://<IP-Weatherman\>/?param:12:1:
+      - Firmware > 86:
+        - http://<IP-Weatherman\>/?param:12:8181:
 - die myHOME-Datenbank muss angelegt und für den Weatherman vorbereitet sein (siehe Doku dort)
 - in der myHOME-Datenbank befindet sich für jedes Gerät/Sensor/Wert ein Konfigurationssatz, über den u.a. gesteuert werden kann, was mit dem Datensatz geschehen soll - es kann konfiguriert werden ...
   - nur die Daten werden weiterverarbeitet, für die es einen Konfigurationseintrag in der myHOME-Datenbank gibt

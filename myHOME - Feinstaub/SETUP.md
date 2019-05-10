@@ -143,7 +143,13 @@ Kopieren des Feinstaub Node-RED Moduls, indem die Datei 'myHOME_FLOW_Feinstaub_x
 Mit einem Doppelklick auf den Node 'Init-Flow' die Anpassungen für das Feinstaub Modul vornehmen.
 
 - *var myBaro_NN = 190;*<br>
-Altitude [m] - eigene Ortshöhe über N.N. zur Berechnung des barometrischen Luftdrucks in Bezug zu N.N.. Von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert umgerechnet werden soll, ändern<br>
+Altitude [m] - eigene Ortshöhe über N.N. zur Berechnung des barometrischen Luftdrucks in Bezug zu N.N.. Von dem Wert '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert umgerechnet werden soll, ändern<br>
+  - Definitionen:
+    - absoluter Luftdruck = Luftdruckmessung am Standort des WM (ohne Korrekturwert)
+    - relativer Luftdruck - auf Meereshöhe reduzierter Luftdruckmesswert NN des WM (mit Korrekturwert)
+  - Im FS kann keine Ortshöhe zur Korrektur eingegeben werden - es wird immer der absolute Luftdruck bereitgestellt => es muss hier 'var myBaro_NN = <Ortshoehe>;' gesetzt werden, um auch den relativen Luftdruckwert ermitteln zu können.
+  - Wird hier 'var myBaro_NN = 0;' eingegeben, dann wird der Luftdruckwert des FS ohne Korrektur ausgegeben.
+  - Mit der Ortshöhe werden automatisch die richtigen Werte für 'wm_baro' (absoluter Luftdruck) und 'wm_baro_nn' (relativer Luftdruck) gesetzt - das gilt auch für die Werteanzeigen 'Luftdruck' und 'Luftdruck NN' im Dashboard.
 
 - *var myTmpNewOnly_Default = 1;*<br>
 Flow-Vorgabe, ob nur neue Readings (Werte) oder alle Readings eines Devices berücksichtigt werden sollen<br>
