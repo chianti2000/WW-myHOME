@@ -33,17 +33,17 @@
 
 Gesamter Flow für alle Optionen mit Debug Optionen:
 
-![Node-RED - GUI -  WW-myHOME - Feinstaub](./img/NodeRED_GUI_Feinstaub_1.0.jpg)
+![Node-RED - GUI -  WW-myHOME - Feinstaub](./img/NodeRED_GUI_Feinstaub_1.1.jpg)
 
 ### Node-RED - FLOW
 
 Gesamter Flow für alle Optionen mit Debug Möglichkeiten:
 
-![Node-RED - FLOW -  WW-myHOME - Feinstaub](./img/NodeRED_FLOW_Feinstaub_1.0.jpg)
+![Node-RED - FLOW -  WW-myHOME - Feinstaub](./img/NodeRED_FLOW_Feinstaub_1.1.jpg)
 
 Flow für reine Node-RED GUI-Darstellung über MQTT:
 
-![Node-RED - FLOW -  WW-myHOME - Feinstaub - MQTT](./img/NodeRED_FLOW_Feinstaub_MQTT_1.0.jpg)
+![Node-RED - FLOW -  WW-myHOME - Feinstaub - MQTT](./img/NodeRED_FLOW_Feinstaub_MQTT_1.1.jpg)
 
 ### MQTT Feinstaub in FHEM
 
@@ -64,6 +64,9 @@ Feinstaub-Modul mit Selbstbau-Shield für BME280
 [Link MDAVI - Sensoren](https://www.madavi.de/sensor/graph.php?sensor=esp8266-5437269-bme280)
 
 ### Version
+
+1.1.0.0 - 2018-05-10
+- Aktualisierung und Verifikation für Firmware 123B
 
 1.0.0.0 - 2018-12-07
 - Erstausgabe

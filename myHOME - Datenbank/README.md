@@ -116,7 +116,7 @@ READ_FLAG       internes Flag           0 ... 255
 
 ### Version
 
-1.1.0.0 - 2018-05-09
+1.1.0.0 - 2018-05-10
 - Fortschreibung - siehe 'SQL-Details zur WW-myHOME-Datenbank'
 
 1.0.0.0 - 2018-12-23

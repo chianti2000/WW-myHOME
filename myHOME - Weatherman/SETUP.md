@@ -42,7 +42,10 @@ In der eigenen myHOME-Umgebung laufen so z.B. Node-RED, FHEM und Grafanna über 
   - dazu muss beim Weatherman im 'Expertenmodus' eingestellt werden:
     - CCU-Betrieb >> JSON-Daten an Server@CCU-IP
       - http://<IP-Weatherman\>/?ccu:<IP-NodeRED-Server\>:
-      - http://<IP-Weatherman\>/?param:12:1:
+        - Firmware 58:
+          - http://<IP-Weatherman\>/?param:12:1:
+        - Firmware > 86:
+          - http://<IP-Weatherman\>/?param:12:8181:
 - die Ortshöhe über N.N. muss im Weatherman auf '0' gesetzt werden, da die barometrische Höhenreduktion über das Node-RED Modul erfolgt:
   - http://<IP-Weatherman\>/?param:20:0:
 
@@ -83,8 +86,6 @@ Die CSV-Dateien sind vorkonfiguriert und können sofort benutzt werden. Bitte di
 Erläuterungen zu den CSV-Spalten finden sich in der Beschreibung:
 
 [Datenbank-Tabelle - SENSOR_DEVICES](/myHOME%20-%20Datenbank/README.md#datenbank-tabelle---sensor_devices)
-
-Anpassung der barometrischen Ortshöhen-Beschreibung "hPa (190 m ü. N.N.)" in der Zeile 23 der Datei 'myHOME_Devices_xxx.csv' von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert reduziert werden soll.
 
 Für den Weatherman werden die im JSON-String übergebenen 'name'-Bezeichnungen neu 'normiert' - damit braucht keine Code-Anpassung der Folge-Prozesse mehr erfolgen, wenn bei einer Firmware-Änderung die 'homematic_name'-Einträge geändert werden - bei den Folgeprozessen bleiben die festgelegten Device Bezeichner und Zuordnungen erhalten:
 
@@ -144,7 +145,14 @@ Kopieren des Weatherman Node-RED Moduls, indem die Datei 'myHOME_FLOW_Weatherman
 Mit einem Doppelklick auf den Node 'Init-Flow' die Anpassungen für das Weatherman Modul vornehmen.
 
 - *var myBaro_NN = 190;*<br>
-Altitude [m] - eigene Ortshöhe über N.N. zur Berechnung des barometrischen Luftdrucks in Bezug zu N.N.. Von '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert umgerechnet werden soll, ändern<br>
+Altitude [m] - eigene Ortshöhe über N.N. zur Berechnung des barometrischen Luftdrucks in Bezug zu N.N.. Von dem Wert '190' auf den N.N. Höhenwert, auf den der gemessene barometrische Wert umgerechnet werden soll, ändern<br>
+  - Definitionen:
+    - absoluter Luftdruck = Luftdruckmessung am Standort des WM (ohne Korrekturwert)
+    - relativer Luftdruck - auf Meereshoehe reduzierter Luftdruckmesswert NN des WM (mit Korrekturwert)
+  - Wird im Weatherman eine Ortshoehe <> 0 eingetragen erfolgt die Ausgabe im Feld 'w_barometer' als relativer Luftdruckwert => dann muss hier 'var myBaro_NN = -<Ortshoehe>;' gesetzt werden, um auch den absoluten Luftdruckwert ermitteln zu können
+  - Wird im Weatherman eine Ortshoehe == 0 (--bitte so einstellen--) eingetragen erfolgt die Ausgabe im Feld 'w_barometer' als absoluter Luftdruckwert => dann muss hier 'var myBaro_NN = <Ortshoehe>;' gesetzt werden, um auch den relativen Luftdruckwert ermitteln zu können
+  - Wird hier 'var myBaro_NN = 0;' eingegeben, dann wird der Luftdruckwert des WM (gleich welche Ortshoehe im 'param:20' eingestellt ist) ohne Korrektur ausgegeben
+  - Mit der Ortshoehe werden automatisch die richtigen Werte fuer 'wm_baro' (absoluter Luftdruck) und 'wm_baro_nn' (relativer Luftdruck) gesetzt - das gilt auch fuer die Werteanzeigen 'Luftdruck' und 'Luftdruck NN' im Dashboard
 
 - *var myTmpNewOnly_Default = 1;*<br>
 Flow-Vorgabe, ob nur neue Readings (Werte) oder alle Readings eines Devices berücksichtigt werden sollen<br>
@@ -205,6 +213,9 @@ Man kann das Modul auch als reines 'Weatherman to MQTT' Modul ohne jegliche Anze
 Nach der Bereinigung wird mit dem 'Deploy' Knopf die Änderung veröffentlicht.
 
 ### Version
+
+1.1.0.0 - 2019-05-10
+- Anpassung für barometrische Höhenkorrektur 'myBaro_NN'
 
 1.0.0.0 - 2018-12-26
 - Erstausgabe
