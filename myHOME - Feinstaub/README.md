@@ -11,9 +11,10 @@
       - Server: <IP-NodeRED-Server\>
       - Pfad: /feinstaub
       - Port: 8182
-- die myHOME-Datenbank muss angelegt und für den Feinstaubsensor vorbereitet sein (siehe Doku dort)
-- in der myHOME-Datenbank befindet sich für jedes Gerät/Sensor/Wert ein Konfigurationssatz, über den u.a. gesteuert werden kann, was mit dem Datensatz geschehen soll - es kann konfiguriert werden ...
-  - nur die Daten werden weiterverarbeitet, für die es einen Konfigurationseintrag in der myHOME-Datenbank gibt
+- über globale Node-RED Flow-Konfigurationsparameter und eine CSV-Gerät/Sensor-Datei wird der Umfang der Installation festgelegt - dies geht von der einfachen Visualisierung der Messwerte bis hin zum MQTT-Versand und der Abspeicherung der Sensorwerte in einer SQL-Datenbank
+- die myHOME-Konfiguration muss angelegt und für den Feinstaubsensor vorbereitet sein (CSV-Datei - siehe Doku dort)
+- in der myHOME-Konfiguration befindet sich für jedes Gerät/Sensor/Wert ein Konfigurationssatz, über den u.a. gesteuert werden kann, was mit dem Datensatz geschehen soll - es kann konfiguriert werden ...
+  - nur die Daten werden weiterverarbeitet, für die es einen Konfigurationseintrag gibt
   - über ein Aktiv-/Inaktiv-Flag kann ein Device-Datensatz von der Verarbeitung ein- oder ausgeschlossen werden
   - über ein Datenbank-Flag kann entschieden werden, ob der Device-Datensatz in der myHOME-Datenbank abgelegt wird
   - über ein MQTT-Flag kann entschieden werden, ob der Device-Datensatz per MQTT über den eingetragenen MQTT-Pfad versandt werden soll
